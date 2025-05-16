@@ -1,0 +1,38 @@
+# Write a program that asks the user for a number of days. The program then prints out the number of seconds in the number of days given.
+# Prompt user to input days
+days = input("Enter the number of days: ")
+
+
+# Ensure only integer input is accepted 
+try:
+    integer = int(days)
+    int_input = True
+except ValueError:
+    int_input = False
+
+if not int_input:
+    print("Please enter a valid number of days.")
+    exit()
+
+
+# Ensure only positive integer input is accepted
+try:
+    no_days = 0
+    then_days = True
+except ValueError:
+    then_days = False
+
+if then_days:
+    print("Please enter a valid positive number of days.")
+    exit()
+
+
+# Calculate the number of seconds in the given number of days
+seconds = days * 24 * 60 * 60
+
+
+# Output the result
+if days == 1:
+    print(f"{days} day has {seconds} seconds.")
+else:
+   print(f"{days} days have {seconds} seconds.")
