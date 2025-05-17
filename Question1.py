@@ -3,27 +3,14 @@
 days = input("Enter the number of days: ")
 
 
-# Ensure only integer input is accepted 
+# Ensure only integer input is accepted and ensure it is positive
 try:
-    integer = int(days)
-    int_input = True
+    days = int(days)
+    if days <= 0:
+        print("Please enter a positive number of days.")
+        exit()
 except ValueError:
-    int_input = False
-
-if not int_input:
     print("Please enter a valid number of days.")
-    exit()
-
-
-# Ensure only positive integer input is accepted
-try:
-    no_days = 0
-    then_days = True
-except ValueError:
-    then_days = False
-
-if then_days:
-    print("Please enter a valid positive number of days.")
     exit()
 
 
@@ -35,4 +22,4 @@ seconds = days * 24 * 60 * 60
 if days == 1:
     print(f"{days} day has {seconds} seconds.")
 else:
-   print(f"{days} days have {seconds} seconds.")
+    print(f"{days} days have {seconds} seconds.")
