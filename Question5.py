@@ -10,4 +10,4 @@ while y >= 6:
 
 
 # Display the value of x
-print(f"The final  value of x is: {x}")
+print(f"The final  value of x is: {x: .5f}")
